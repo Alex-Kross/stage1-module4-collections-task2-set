@@ -8,9 +8,9 @@ import java.util.TreeSet;
 public class SubsetOfSquaresCreator {
     public Set<Integer> createSubsetOfSquares(List<Integer> sourceList, int lowerBound, int upperBound) {
         TreeSet<Integer> treeSet = new TreeSet<>();
-        Iterator iterator = sourceList.iterator();
+        Iterator<Integer> iterator = sourceList.iterator();
         while (iterator.hasNext()) {
-            int number = (int) iterator.next();
+            int number = iterator.next();
             treeSet.add(number * number);
         }
         return treeSet.subSet(lowerBound, upperBound + 1);
